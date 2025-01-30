@@ -68,6 +68,7 @@ sce_layer <- spatialLIBD::fetch_data("sce_layer")
 
 ## Explorar los datos
 iSEE::iSEE(sce_layer)
-##
+## #
 
+Ejercicio
 ###
