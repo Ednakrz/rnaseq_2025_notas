@@ -31,5 +31,42 @@ rse <- SummarizedExperiment(
   colData = colData
 )
 
+#comentario
 ## Exploremos el objeto resultante
 rse
+
+stopifnot(
+  identical(
+    rse[,c(1,4,6)],
+    rse[,c("A","D","F")]
+  )
+)
+
+
+# Ejercicio de clase
+
+## Comando 1
+## Seleccionala los primeros dos renglones de mi tabla y obtienen el resumen de
+## todas las columnas
+rse[1:2, ]
+
+
+
+## Comando 2
+## Devuelve el rse de todos los renglones (genes) de las colúmnas específicadas
+## A, D y F.
+rse[, c("A", "D", "F")]
+
+## Explora el objeto rse de forma interactiva
+library("iSEE")
+iSEE::iSEE(rse)
+
+## Ejercicio final
+
+## Descarguemos unos datos de spatialLIBD
+sce_layer <- spatialLIBD::fetch_data("sce_layer")
+
+## Explorar los datos
+iSEE::iSEE(sce_layer)
+##
+
