@@ -14,4 +14,11 @@ proj_info <- subset(
 
 ## Crea un objeto de tipo RangedSummarizedExperiment (RSE)
 ## con la información a nivel de genes
-rse_gene_SRP009615 <- create_rse(proj_info)
+rse_gene_SRP009615 <- create_rse(proj_info) # el create rse tiene que ser un
+#dataframe y de un solo renglón
+
+## Explora el objeto RSE
+rse_gene_SRP009615
+
+
+
