@@ -44,4 +44,23 @@ app <- ExploreModelMatrix::ExploreModelMatrix(
 )
 if (interactive()) shiny::runApp(app)
 
+## --------------- Example 2 --------------------------------
+
+(sampleData <- data.frame(
+  Response = rep(c("Resistant", "Sensitive"), c(12, 18)),
+  Patient = factor(rep(c(1:6, 8, 11:18), each = 2)),
+  Treatment = factor(rep(c("pre","post"), 15)),
+  ind.n = factor(rep(c(1:6, 2, 5:12), each = 2))))
+
+vd <- ExploreModelMatrix::VisualizeDesign(
+  sampleData = sampleData,
+  designFormula = ~ Response + Response:ind.n + Response:Treatment,
+  textSizeFitted = 3
+)
+cowplot::plot_grid(plotlist = vd$plotlist, ncol = 1)
+
+## --------------- Example 3 --------------------------------
+
+
+
 
