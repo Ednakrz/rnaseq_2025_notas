@@ -166,7 +166,7 @@ dge <- DGEList(
 dge <- calcNormFactors(dge)
 
 
-## ------------Expresión diferencial -------------------------------
+## ------------ Expresión diferencial -------------------------------
 
 library("ggplot2")
 ggplot(as.data.frame(colData(rse_gene_SRP045638)), aes(y = assigned_gene_prop, x = prenatal)) +
@@ -246,5 +246,6 @@ col.sex <- as.character(col.sex)
 
 ## MDS por sexo
 plotMDS(vGene$E, labels = df$Sex, col = col.sex)
+
 
 
