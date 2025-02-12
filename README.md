@@ -6,6 +6,7 @@
 ## Introducción 
 
 Este repositorio almacena las notas generadas en el curso **"Análisis de datos de secuenciación masiva 2025"**, impartido por el Doctor. Leonardo Collado. 
+
 Aquí se encuentra: 
 - Notas de clase
 - Código de los ejercicios
